@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Client.Pagemodel.Login"
+             x:Class="Client.Pages.Login.LoginPage"
+             x:DataType="vm:LoginPagemodel"
+             Title="LoginPage"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#3AA6A0">
+            <Border StrokeShape="RoundRectangle 50" MaximumWidthRequest="750" Stroke="#14453D" StrokeThickness="3" Margin="0,200" BackgroundColor="#E8E3D3">
+                <StackLayout>
+                    <StackLayout MaximumWidthRequest="500"  Margin="0,10,0,10">
+                        <Border Stroke="#14453D" Margin="0,0,0,5" StrokeThickness="3">
+                            <Entry Text="{Binding Username}" Placeholder="Escribe el usuario" PlaceholderColor="#14453D" BackgroundColor="#E7E5DF" FontAttributes="Bold" Margin="0,0,0,0"/>
+                        </Border>
+                        <Border Stroke="#14453D" StrokeThickness="3">
+                            <Entry Text="{Binding Password}" Placeholder="Escribe la contraseña" IsPassword="True" PlaceholderColor="#14453D" BackgroundColor="#E7E5DF" FontAttributes="Bold"/>
+                        </Border>
+                    </StackLayout>
+                    <Button Text="Iniciar Sesión" Command="{Binding iniciarSesionCommand }" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,0,10,5"/>
+                    <Button Text="Recuperar Contraseña" Command="{Binding recuperarContraseñaCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,0,10,15"/>
+                </StackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

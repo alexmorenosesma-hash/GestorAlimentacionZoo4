@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Client.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Client.Pages"
+    xmlns:menu="clr-namespace:Client.Pages.Menu"
+    xmlns:inventarios="clr-namespace:Client.Pages.Inventarios"
+    Title="Client">
+
+    <ShellContent
+        ContentTemplate="{DataTemplate menu:MenuPage}"
+        Route="MenuPage" />
+    <ShellContent
+        ContentTemplate="{DataTemplate inventarios:AlimentoPage}"
+        Route="AlimentoPage" />
+    <ShellContent
+        ContentTemplate="{DataTemplate inventarios:HorarioPage}"
+        Route="HorarioPage" />
+    <ShellContent
+        ContentTemplate="{DataTemplate inventarios:AnimalPage}"
+        Route="AnimalPage"/>
+    <ShellContent
+        ContentTemplate="{DataTemplate inventarios:DietaPage}"
+        Route="DietaPage" />
+    <ShellContent
+        ContentTemplate="{DataTemplate inventarios:EspeciePage}"
+        Route="EspeciePage" />
+    <ShellContent
+        ContentTemplate="{DataTemplate inventarios:EnfermedadPage}"
+        Route="EnfermedadPage" />
+    <ShellContent
+        ContentTemplate="{DataTemplate inventarios:CuidadorPage}"
+        Route="CuidadorPage" />
+
+
+</Shell>

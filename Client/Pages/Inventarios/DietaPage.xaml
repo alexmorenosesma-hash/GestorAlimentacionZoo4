@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Client.Pagemodel.Inventarios"
+             xmlns:domain="clr-namespace:Domain.Entities;assembly=Domain"
+             xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons"
+             x:Class="Client.Pages.Inventarios.DietaPage"
+             x:DataType="vm:DietaPagemodel"
+             x:Name="RootPage"
+             >
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#3AA6A0">
+            <Border StrokeShape="RoundRectangle 50" MaximumWidthRequest="750" Stroke="#14453D" StrokeThickness="3" Margin="0,200" BackgroundColor="#E8E3D3">
+                <StackLayout>
+                    <SearchBar Text="{Binding TextoBusqueda}" Placeholder="Buscar especie" Margin="20,0,0,0" MaximumWidthRequest="300"/>
+                    <Picker Title="Ordenar por" SelectedItem="{Binding CriterioOrden}" Margin="20,0,0,0" MaximumWidthRequest="300">
+                        <Picker.Items>
+                            <x:String>Nombre</x:String>
+                            <x:String>Cantidad de alimentos</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Command="{Binding volverCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="15" mi:MauiIcon.Value="{mi:Fluent Icon=ArrowLeft20}"/>
+                        <Button Grid.Column="2" Command="{Binding abrirPopupAñadirCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="15" mi:MauiIcon.Value="{mi:Fluent Icon=Add20}"/>
+                    </Grid>
+                    <CollectionView ItemsSource="{Binding DietasFiltradas}">
+                        <CollectionView.EmptyView>
+                            <Label Text="No hay dietas registradas" 
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            TextColor="Black"/>
+                        </CollectionView.EmptyView>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="domain:Dieta">
+                                <Border BackgroundColor="#C9C7C2" Stroke="#14453D" StrokeThickness="3" BindingContext="{Binding}">
+                                    <StackLayout>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Button Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.abrirPopupEliminarCommand}" CommandParameter="{Binding .}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="0,0,250,0" Grid.Column="0" Grid.Row="0" mi:MauiIcon.Value="{mi:Fluent Icon=Delete20}"/>
+                                            <Button Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.abrirPopupModificarCommand}" CommandParameter="{Binding .}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="250,0,0,0" Grid.Column="1" Grid.Row="0" mi:MauiIcon.Value="{mi:Fluent Icon=Settings20}"/>
+                                            <Label Text="Nombre:" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="End"/>
+                                            <Label Text="{Binding nombre}" FontAttributes="Bold" Grid.Column="1" Grid.Row="1"/>
+                                            <Label Text="Alimentos:" FontAttributes="Bold" Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="End" Margin="0,0,0,20"/>
+                                            <CollectionView Grid.Column="1" Grid.Row="2" ItemsSource="{Binding alimentos}" Margin="0,20,0,0">
+                                                <CollectionView.ItemTemplate>
+                                                    <DataTemplate x:DataType="domain:AlimentoCantidad">
+                                                        <HorizontalStackLayout Spacing="10" Margin="30,0,0,0">
+                                                            <Label Text="{Binding Nombre}"  FontAttributes="Bold"/>
+                                                            <Label Text="x" FontAttributes="Bold"/>
+                                                            <Label Text="{Binding Cantidad}"  FontAttributes="Bold"/>
+                                                        </HorizontalStackLayout>
+                                                    </DataTemplate>
+                                                </CollectionView.ItemTemplate>
+                                            </CollectionView>
+                                        </Grid>
+                                    </StackLayout>
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

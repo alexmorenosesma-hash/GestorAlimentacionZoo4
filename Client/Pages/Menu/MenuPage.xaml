@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Client.Pagemodel.Menu"
+             x:Class="Client.Pages.Menu.MenuPage"
+             x:DataType="vm:MenuPagemodel"
+             >
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#3AA6A0">
+            <Border StrokeShape="RoundRectangle 50" MaximumWidthRequest="750" Stroke="#14453D" StrokeThickness="3" Margin="0,200" BackgroundColor="#E8E3D3">
+                <StackLayout>
+                    <Button Text="Especies" Command="{Binding irEspeciesCommand }" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,20,10,5"/>
+                    <Button Text="Animales" Command="{Binding irAnimalCommand }" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,5,10,5"/>
+                    <Button Text="Horarios" Command="{Binding irHorarioCommand }" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,5,10,5"/>
+                    <Button Text="Dietas" Command="{Binding irDietaCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,5,10,5"/>
+                    <Button Text="Alimentos" Command="{Binding irAlimentosCommand }" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,0,10,5"/>
+                    <Button Text="Enfermedades" Command="{Binding irEnfermedadesCommand }" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,0,10,5"/>
+                    <Button Text="Cuidadores" Command="{Binding irCuidadoresCommand }" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,0,10,5"/>
+                    <Button Text="Cerrar Sesion" Command="{Binding cerrarSesionCommand }" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="10,0,10,20"/>   
+                </StackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

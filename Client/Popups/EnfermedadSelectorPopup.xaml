@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:vm="clr-namespace:Client.Pagemodel.Popups"
+    xmlns:models="clr-namespace:Domain.Entities;assembly=Domain"
+    x:Class="Client.Popups.EnfermedadSelectorPopup"
+    x:TypeArguments="models:EnfermedadSeleccionadas"
+    x:DataType="vm:EnfermedadSelectorPopupPagemodel"
+    Background="#E8E3D3">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <Label Text="Selecciona las enfermedades" FontAttributes="Bold" />
+
+        <CollectionView ItemsSource="{Binding Enfermedades}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout Spacing="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox IsChecked="{Binding Seleccionado, Mode=TwoWay}" Grid.Column="0" Color="#14453D"/>
+                            <Label Text="{Binding Nombre}" Grid.Column="1" Margin="0,12,0,0"  />
+                        </Grid>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Guardar" Command="{Binding ConfirmCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
+        <Button Text="Cancelar" Command="{Binding CancelCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
+
+    </VerticalStackLayout>
+</toolkit:Popup>
