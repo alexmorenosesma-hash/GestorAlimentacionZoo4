@@ -5,12 +5,15 @@ using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Domain.Entities;
+using System.Collections.ObjectModel;
 using System.Reactive.Linq;
 
 namespace Client.Pagemodel.Popups;
 
 public partial class DietaModificarPopupPagemodel : ObservableObject
-{   
+{
+    [ObservableProperty]
+    ObservableCollection<string> _tiposAlimentacion = new ObservableCollection<string> { "Carnívoro", "Herbívoro", "Omnívoro" };
 
     [ObservableProperty]
     Dieta model=new();
@@ -18,6 +21,7 @@ public partial class DietaModificarPopupPagemodel : ObservableObject
     IPopupService _popup;
     IServiceProvider _serviceProvider;
     IAlimentoRepository _alimentoRepository;
+
     public DietaModificarPopupPagemodel(IPopupService popup, IServiceProvider serviceProvider, IAlimentoRepository alimentoRepository    )
     {
         _popup = popup;
@@ -30,7 +34,8 @@ public partial class DietaModificarPopupPagemodel : ObservableObject
         return
             !string.IsNullOrWhiteSpace(Model.nombre) &&
             Model.alimentos != null &&
-            Model.alimentos.Any(a => a.Cantidad > 0);
+            Model.alimentos.Any(a => a.Cantidad > 0)
+            && !string.IsNullOrWhiteSpace(Model.tipoAlimentacion);
     }
 
     [RelayCommand]

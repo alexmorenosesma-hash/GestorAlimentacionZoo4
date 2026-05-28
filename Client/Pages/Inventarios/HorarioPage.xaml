@@ -44,7 +44,7 @@
                                             <Button Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.abrirPopupEliminarCommand}" CommandParameter="{Binding .}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="0,0,250,0" Grid.Column="0" Grid.Row="0" mi:MauiIcon.Value="{mi:Fluent Icon=Delete20}"/>
                                             <Button Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.abrirPopupModificarCommand}" CommandParameter="{Binding .}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="250,0,0,0" Grid.Column="1" Grid.Row="0" mi:MauiIcon.Value="{mi:Fluent Icon=Settings20}"/>
                                             <Label Text="Hora:" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="End"/>
-                                            <Label Text="{Binding hora}" FontAttributes="Bold" Grid.Column="1" Grid.Row="1"/>
+                                            <Label Text="{Binding hora}" FontAttributes="Bold" Grid.Column="1" Grid.Row="1" Margin="0,0,0,20"/>
                                         </Grid>
                                     </StackLayout>
                                 </Border>

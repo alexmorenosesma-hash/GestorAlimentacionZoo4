@@ -42,6 +42,20 @@ namespace Infraestructure.Services.Firebase.Auth
             var user = await _client.SignInWithEmailAndPasswordAsync(email, password);
             return user.User.Uid;
         }
+        public async Task LogoutAsync()
+        {
+            try
+            {
+                _client.SignOut();
+                await Task.CompletedTask;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al cerrar sesión: " + ex.Message);
+                throw;
+            }
+        }
+
     }
 }
 

@@ -13,6 +13,10 @@
             <Border Stroke="#14453D" Margin="0,0,0,5" StrokeThickness="3">
                 <Entry Text="{Binding Model.nombre, Mode=TwoWay}"/>
             </Border>
+            <Label Text="Escribe el tipo de alimentación" FontAttributes="Bold"/>
+            <Border Stroke="#14453D" Margin="0,0,0,5" StrokeThickness="3">
+                <Picker ItemsSource="{Binding TiposAlimentacion}" SelectedItem="{Binding Model.tipoAlimentacion}"/>
+            </Border>
         </StackLayout>
         <Button Text="Seleccionar Alimentos" Command= "{Binding SeleccionarAlimentosCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="0,5"/>
         <Button Text="Guardar" Command="{Binding SaveCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="0,0,0,5"/>

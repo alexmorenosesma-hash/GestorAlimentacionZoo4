@@ -10,29 +10,29 @@
     x:DataType="vm:HorarioSelectorPopupPagemodel"
     Background="#E8E3D3">
 
-    <VerticalStackLayout Padding="20" Spacing="10">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="Selecciona los horarios" FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding Horarios}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout Spacing="10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox IsChecked="{Binding Seleccionado, Mode=TwoWay}" Grid.Column="0" Color="#14453D"/>
+                                <Label Text="{Binding Nombre}" Grid.Column="1" Margin="0,12,0,0"  />
+                            </Grid>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
-        <Label Text="Selecciona los horarios" FontAttributes="Bold" />
+            <Button Text="Guardar" Command="{Binding ConfirmCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
+            <Button Text="Cancelar" Command="{Binding CancelCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
 
-        <CollectionView ItemsSource="{Binding Horarios}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <HorizontalStackLayout Spacing="10">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <CheckBox IsChecked="{Binding Seleccionado, Mode=TwoWay}" Grid.Column="0" Color="#14453D"/>
-                            <Label Text="{Binding Nombre}" Grid.Column="1" Margin="0,12,0,0"  />
-                        </Grid>
-                    </HorizontalStackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-
-        <Button Text="Guardar" Command="{Binding ConfirmCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
-        <Button Text="Cancelar" Command="{Binding CancelCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
-
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </toolkit:Popup>

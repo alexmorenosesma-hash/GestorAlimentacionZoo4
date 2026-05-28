@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Aplication/Aplication.csproj" />
+  <Project Path="Client/Client.csproj">
+    <Deploy Solution="Debug|x64" />
+  </Project>
+  <Project Path="Domain/Domain.csproj" />
+  <Project Path="Infraestructure/Infraestructure.csproj" />
+</Solution>

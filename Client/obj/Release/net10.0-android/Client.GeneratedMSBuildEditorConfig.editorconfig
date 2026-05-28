@@ -1,0 +1,344 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.VerifyReferenceTrimCompatibility = 
+build_property.VerifyReferenceAotCompatibility = 
+build_property.MauiXamlNoWarn = 
+build_property.EnableMauiXamlDiagnostics = 
+build_property.MauiXamlLineInfo = 
+build_property.Configuration = Release
+build_property.EnablePreviewFeatures = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.TargetFramework = net10.0-android
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Client
+build_property.ProjectDir = C:\Users\alexm\Desktop\v\Client\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/alexm/Desktop/v/Client/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Pages/Inventarios/AlimentoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Pages.Inventarios.AlimentoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Inventarios\AlimentoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Inventarios\AlimentoPage.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Pages/Inventarios/AnimalPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Pages.Inventarios.AnimalPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Inventarios\AnimalPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Inventarios\AnimalPage.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Pages/Inventarios/CuidadorPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Pages.Inventarios.CuidadorPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Inventarios\CuidadorPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Inventarios\CuidadorPage.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Pages/Inventarios/DietaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Pages.Inventarios.DietaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Inventarios\DietaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Inventarios\DietaPage.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Pages/Inventarios/EnfermedadPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Pages.Inventarios.EnfermedadPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Inventarios\EnfermedadPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Inventarios\EnfermedadPage.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Pages/Inventarios/EspeciePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Pages.Inventarios.EspeciePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Inventarios\EspeciePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Inventarios\EspeciePage.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Pages/Inventarios/HorarioPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Pages.Inventarios.HorarioPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Inventarios\HorarioPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Inventarios\HorarioPage.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Pages/Login/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Pages.Login.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Login\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Login\LoginPage.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Pages/Menu/MenuPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Pages.Menu.MenuPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Menu\MenuPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Menu\MenuPage.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/AlimentoModificarPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.AlimentoModificarPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\AlimentoModificarPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\AlimentoModificarPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/AlimentoPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.AlimentoPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\AlimentoPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\AlimentoPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/AlimentoSelectorPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.AlimentoSelectorPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\AlimentoSelectorPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\AlimentoSelectorPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/AnimalModificarPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.AnimalModificarPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\AnimalModificarPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\AnimalModificarPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/AnimalPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.AnimalPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\AnimalPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\AnimalPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/CuidadorModificarPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.CuidadorModificarPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\CuidadorModificarPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\CuidadorModificarPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/CuidadorPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.CuidadorPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\CuidadorPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\CuidadorPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/DietaModificarPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.DietaModificarPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\DietaModificarPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\DietaModificarPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/DietaPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.DietaPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\DietaPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\DietaPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/EliminarPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.EliminarPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\EliminarPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\EliminarPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/EnfermedadModificarPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.EnfermedadModificarPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\EnfermedadModificarPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\EnfermedadModificarPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/EnfermedadPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.EnfermedadPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\EnfermedadPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\EnfermedadPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/EnfermedadSelectorPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.EnfermedadSelectorPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\EnfermedadSelectorPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\EnfermedadSelectorPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/EspecieModificarPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.EspecieModificarPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\EspecieModificarPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\EspecieModificarPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/EspeciePopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.EspeciePopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\EspeciePopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\EspeciePopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/HorarioModificarPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.HorarioModificarPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\HorarioModificarPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\HorarioModificarPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/HorarioPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.HorarioPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\HorarioPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\HorarioPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Popups/HorarioSelectorPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Popups.HorarioSelectorPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Popups\HorarioSelectorPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Popups\HorarioSelectorPopup.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 
+
+[C:/Users/alexm/Desktop/v/Client/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Client.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.Inflator = SourceGen
+build_metadata.AdditionalFiles.NoWarn = 
+build_metadata.AdditionalFiles.EnableDiagnostics = 
+build_metadata.AdditionalFiles.LineInfo = 

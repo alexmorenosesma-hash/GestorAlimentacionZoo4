@@ -54,7 +54,7 @@
                                             <Label Text="Nombre:" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="End"/>
                                             <Label Text="{Binding nombre}" FontAttributes="Bold" Grid.Column="1" Grid.Row="1"/>
                                             <Label Text="Síntomas:" FontAttributes="Bold" Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="End"/>
-                                            <Label Text="{Binding sintomas}" FontAttributes="Bold" Grid.Column="1" Grid.Row="2" />
+                                            <Label Text="{Binding sintomas}" FontAttributes="Bold" Grid.Column="1" Grid.Row="2" Margin="0,0,0,20"/>
                                         </Grid>
                                     </StackLayout>
                                 </Border>

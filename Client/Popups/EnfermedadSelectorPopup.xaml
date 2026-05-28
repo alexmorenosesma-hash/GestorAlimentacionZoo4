@@ -9,30 +9,28 @@
     x:TypeArguments="models:EnfermedadSeleccionadas"
     x:DataType="vm:EnfermedadSelectorPopupPagemodel"
     Background="#E8E3D3">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="Selecciona las enfermedades" FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding Enfermedades}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout Spacing="10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox IsChecked="{Binding Seleccionado, Mode=TwoWay}" Grid.Column="0" Color="#14453D"/>
+                                <Label Text="{Binding Nombre}" Grid.Column="1" Margin="0,12,0,0"  />
+                            </Grid>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
-    <VerticalStackLayout Padding="20" Spacing="10">
-
-        <Label Text="Selecciona las enfermedades" FontAttributes="Bold" />
-
-        <CollectionView ItemsSource="{Binding Enfermedades}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <HorizontalStackLayout Spacing="10">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <CheckBox IsChecked="{Binding Seleccionado, Mode=TwoWay}" Grid.Column="0" Color="#14453D"/>
-                            <Label Text="{Binding Nombre}" Grid.Column="1" Margin="0,12,0,0"  />
-                        </Grid>
-                    </HorizontalStackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-
-        <Button Text="Guardar" Command="{Binding ConfirmCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
-        <Button Text="Cancelar" Command="{Binding CancelCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
-
-    </VerticalStackLayout>
+            <Button Text="Guardar" Command="{Binding ConfirmCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
+            <Button Text="Cancelar" Command="{Binding CancelCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold"/>
+        </VerticalStackLayout>
+    </ScrollView>
 </toolkit:Popup>

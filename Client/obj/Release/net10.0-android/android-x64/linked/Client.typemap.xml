@@ -1,0 +1,8 @@
+<api type="release" assembly-name="Client" mvid="b1dfe14c32784843a4f7f6d583a4fa1e">
+  <module assembly-name="Client" mvid="b1dfe14c32784843a4f7f6d583a4fa1e" mvid-bytes="TOHfsXgyQ0ik9/bVg6T6Hg==">
+    <types-scratch>
+      <entry key="crc643fa3c810459e540c/MainActivity" java-name="crc643fa3c810459e540c/MainActivity" managed-type-name="Client.MainActivity" token="33554452" />
+      <entry key="crc643fa3c810459e540c/MainApplication" java-name="crc643fa3c810459e540c/MainApplication" managed-type-name="Client.MainApplication" token="33554453" />
+    </types-scratch>
+  </module>
+</api>

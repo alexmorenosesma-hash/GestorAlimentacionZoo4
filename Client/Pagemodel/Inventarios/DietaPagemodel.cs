@@ -84,7 +84,8 @@ public partial class DietaPagemodel : ObservableObject
         {
             idDieta = dieta.idDieta,
             nombre = dieta.nombre,
-            alimentos = dieta.alimentos
+            alimentos = dieta.alimentos,
+            tipoAlimentacion = dieta.tipoAlimentacion
         };
 
         var popup = new DietaModificarPopup(vm);
@@ -140,6 +141,7 @@ public partial class DietaPagemodel : ObservableObject
         {
             "Nombre" => lista.OrderBy(d => d.nombre),
             "Cantidad de alimentos" => lista.OrderBy(d => d.alimentos.Count),
+            "Tipo de Alimentación" => lista.OrderBy(d => d.tipoAlimentacion),
             _ => lista
         };
 

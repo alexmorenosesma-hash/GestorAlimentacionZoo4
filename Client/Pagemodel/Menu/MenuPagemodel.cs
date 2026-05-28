@@ -10,9 +10,9 @@ namespace Client.Pagemodel.Menu;
 public partial class MenuPagemodel : ObservableObject
 {
     private readonly IAuthService _auth;
-    public MenuPagemodel()
+    public MenuPagemodel(IAuthService auth)
 	{
-
+        _auth = auth;
 	}
     [RelayCommand]
 	public async Task irEspecies()
@@ -53,6 +53,7 @@ public partial class MenuPagemodel : ObservableObject
     [RelayCommand]
     public async Task cerrarSesion()
     {
+        await _auth.LogoutAsync();
         Application.Current.MainPage = new LoginPage(new LoginPagemodel(_auth));
     }
 }

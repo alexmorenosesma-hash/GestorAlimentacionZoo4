@@ -12,7 +12,7 @@
         <VerticalStackLayout BackgroundColor="#3AA6A0">
             <Border StrokeShape="RoundRectangle 50" MaximumWidthRequest="750" Stroke="#14453D" StrokeThickness="3" Margin="0,200" BackgroundColor="#E8E3D3">
                 <StackLayout>
-                    <SearchBar Text="{Binding TextoBusqueda}" Placeholder="Buscar especie" Margin="20,0,0,0" MaximumWidthRequest="300"/>
+                    <SearchBar Text="{Binding TextoBusqueda}" Placeholder="Buscar animal" Margin="20,0,0,0" MaximumWidthRequest="300"/>
                     <Picker Title="Ordenar por" SelectedItem="{Binding CriterioOrden}" Margin="20,0,0,0" MaximumWidthRequest="300">
                         <Picker.Items>
                             <x:String>Nombre</x:String>

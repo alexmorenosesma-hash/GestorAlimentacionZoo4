@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qo/jNer5xJU=",
+  "dgSpecHash": "rAQmyThwGLY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Client\\Client.csproj",
+  "projectFilePath": "C:\\Users\\alexm\\Desktop\\v\\Client\\Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexm\\.nuget\\packages\\aathifmahir.maui.mauiicons.core\\6.0.0\\aathifmahir.maui.mauiicons.core.6.0.0.nupkg.sha512",
     "C:\\Users\\alexm\\.nuget\\packages\\aathifmahir.maui.mauiicons.fluent\\6.0.0\\aathifmahir.maui.mauiicons.fluent.6.0.0.nupkg.sha512",

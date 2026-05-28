@@ -12,6 +12,8 @@ namespace Client.Pagemodel.Popups;
 
 public partial class DietaPopupPagemodel : ObservableObject
 {
+    [ObservableProperty]
+    ObservableCollection<string> _tiposAlimentacion = new ObservableCollection<string> { "Carnívoro", "Herbívoro", "Omnívoro" };
 
     [ObservableProperty]
     public Dieta _model = new()
@@ -37,7 +39,8 @@ public partial class DietaPopupPagemodel : ObservableObject
         return
             !string.IsNullOrWhiteSpace(Model.nombre) &&
             Model.alimentos != null &&
-            Model.alimentos.Any(a => a.Cantidad > 0);
+            Model.alimentos.Any(a => a.Cantidad > 0)
+            && !string.IsNullOrWhiteSpace(Model.tipoAlimentacion);
     }
 
     [RelayCommand]

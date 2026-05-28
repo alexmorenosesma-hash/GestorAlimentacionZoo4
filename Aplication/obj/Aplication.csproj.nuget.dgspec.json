@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Aplication\\Aplication.csproj": {}
+    "C:\\Users\\alexm\\Desktop\\v\\Aplication\\Aplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Aplication\\Aplication.csproj": {
+    "C:\\Users\\alexm\\Desktop\\v\\Aplication\\Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Aplication\\Aplication.csproj",
+        "projectUniqueName": "C:\\Users\\alexm\\Desktop\\v\\Aplication\\Aplication.csproj",
         "projectName": "Aplication",
-        "projectPath": "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Aplication\\Aplication.csproj",
+        "projectPath": "C:\\Users\\alexm\\Desktop\\v\\Aplication\\Aplication.csproj",
         "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Aplication\\obj\\",
+        "outputPath": "C:\\Users\\alexm\\Desktop\\v\\Aplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,8 +34,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Domain\\Domain.csproj"
+              "C:\\Users\\alexm\\Desktop\\v\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\alexm\\Desktop\\v\\Domain\\Domain.csproj"
               }
             }
           }
@@ -350,14 +350,14 @@
         }
       }
     },
-    "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Domain\\Domain.csproj": {
+    "C:\\Users\\alexm\\Desktop\\v\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\alexm\\Desktop\\v\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\alexm\\Desktop\\v\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexm\\Desktop\\GestorAlimentacionZoo\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\alexm\\Desktop\\v\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

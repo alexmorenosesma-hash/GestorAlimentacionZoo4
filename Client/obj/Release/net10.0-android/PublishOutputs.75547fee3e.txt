@@ -1,0 +1,4 @@
+C:\Users\alexm\Desktop\v\Client\bin\Release\net10.0-android\publish\com.companyname.client-Signed.aab
+C:\Users\alexm\Desktop\v\Client\bin\Release\net10.0-android\publish\com.companyname.client.aab
+C:\Users\alexm\Desktop\v\Client\bin\Release\net10.0-android\publish\com.companyname.client-Signed.apk
+C:\Users\alexm\Desktop\v\Client\bin\Release\net10.0-android\publish\_Microsoft.Android.Resource.Designer.dll

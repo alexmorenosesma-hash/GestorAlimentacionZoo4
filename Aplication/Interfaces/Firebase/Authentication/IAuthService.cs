@@ -8,5 +8,7 @@ namespace Aplication.Interfaces.Firebase.Authentication
     {
         public Task resetEmailPasswordAsync(string email);
         public Task<string> loginAsync(string email, string password);
+        public Task LogoutAsync();
+
     }
 }

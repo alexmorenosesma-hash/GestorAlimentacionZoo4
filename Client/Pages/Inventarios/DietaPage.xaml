@@ -12,11 +12,12 @@
         <VerticalStackLayout BackgroundColor="#3AA6A0">
             <Border StrokeShape="RoundRectangle 50" MaximumWidthRequest="750" Stroke="#14453D" StrokeThickness="3" Margin="0,200" BackgroundColor="#E8E3D3">
                 <StackLayout>
-                    <SearchBar Text="{Binding TextoBusqueda}" Placeholder="Buscar especie" Margin="20,0,0,0" MaximumWidthRequest="300"/>
+                    <SearchBar Text="{Binding TextoBusqueda}" Placeholder="Buscar dieta" Margin="20,0,0,0" MaximumWidthRequest="300"/>
                     <Picker Title="Ordenar por" SelectedItem="{Binding CriterioOrden}" Margin="20,0,0,0" MaximumWidthRequest="300">
                         <Picker.Items>
                             <x:String>Nombre</x:String>
                             <x:String>Cantidad de alimentos</x:String>
+                            <x:String>Tipo de alimentación</x:String>
                         </Picker.Items>
                     </Picker>
                     <Grid>
@@ -44,6 +45,7 @@
                                                 <RowDefinition/>
                                                 <RowDefinition/>
                                                 <RowDefinition/>
+                                                <RowDefinition/>
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition/>
@@ -53,8 +55,10 @@
                                             <Button Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.abrirPopupModificarCommand}" CommandParameter="{Binding .}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="250,0,0,0" Grid.Column="1" Grid.Row="0" mi:MauiIcon.Value="{mi:Fluent Icon=Settings20}"/>
                                             <Label Text="Nombre:" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="End"/>
                                             <Label Text="{Binding nombre}" FontAttributes="Bold" Grid.Column="1" Grid.Row="1"/>
-                                            <Label Text="Alimentos:" FontAttributes="Bold" Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="End" Margin="0,0,0,20"/>
-                                            <CollectionView Grid.Column="1" Grid.Row="2" ItemsSource="{Binding alimentos}" Margin="0,20,0,0">
+                                            <Label Text="Tipo de Alimentación:" FontAttributes="Bold" Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                            <Label Text="{Binding tipoAlimentacion}" FontAttributes="Bold" Grid.Column="1" Grid.Row="2"/>
+                                            <Label Text="Alimentos:" FontAttributes="Bold" Grid.Column="0" Grid.Row="3" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                            <CollectionView Grid.Column="1" Grid.Row="3" ItemsSource="{Binding alimentos}" Margin="0,0,0,20">
                                                 <CollectionView.ItemTemplate>
                                                     <DataTemplate x:DataType="domain:AlimentoCantidad">
                                                         <HorizontalStackLayout Spacing="10" Margin="30,0,0,0">

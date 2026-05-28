@@ -12,23 +12,60 @@ using System.Collections.ObjectModel;
 
 namespace Client.Pagemodel.Inventarios;
 
+/**
+ * <summary>
+ * ViewModel encargado de gestionar la pantalla de inventario de alimentos.
+ * Permite cargar, filtrar, ordenar, crear, modificar y eliminar alimentos.
+ * Utiliza popups para las operaciones CRUD.
+ * ID string generated is "T:Client.Pagemodel.Inventarios.AlimentoPagemodel".
+ * </summary>
+ */
 public partial class AlimentoPagemodel : ObservableObject
 {
     IAlimentoRepository _repository;
     IPopupService _popup;
 
+
+    /**
+     * <summary>
+     * Colección completa de alimentos obtenidos desde el repositorio.
+     * ID string generated is "P:Client.Pagemodel.Inventarios.AlimentoPagemodel.Alimentos".
+     * </summary>
+     */
     [ObservableProperty]
     ObservableCollection<Alimento> _alimentos = new();
-
+    /**
+     * <summary>
+     * Colección filtrada según búsqueda y ordenación.
+     * ID string generated is "P:Client.Pagemodel.Inventarios.AlimentoPagemodel.AlimentosFiltrados".
+     * </summary>
+     */
     [ObservableProperty]
     ObservableCollection<Alimento> _alimentosFiltrados = new();
-
+    /**
+     * <summary>
+     * Texto introducido por el usuario para buscar alimentos.
+     * ID string generated is "P:Client.Pagemodel.Inventarios.AlimentoPagemodel.TextoBusqueda".
+     * </summary>
+     */
     [ObservableProperty]
     string _textoBusqueda;
-
+    /**
+     * <summary>
+     * Criterio seleccionado para ordenar la lista de alimentos.
+     * ID string generated is "P:Client.Pagemodel.Inventarios.AlimentoPagemodel.CriterioOrden".
+     * </summary>
+     */
     [ObservableProperty]
     string _criterioOrden;
 
+    /**
+     * <summary>
+     * Constructor del ViewModel.
+     * Inicializa dependencias y carga los alimentos desde el repositorio.
+     * ID string generated is "M:Client.Pagemodel.Inventarios.AlimentoPagemodel.#ctor(Aplication.Interfaces.Repositories.IAlimentoRepository,CommunityToolkit.Maui.Services.IPopupService)".
+     * </summary>
+     */
     public AlimentoPagemodel(IAlimentoRepository repository, IPopupService popup)
     {
         _repository = repository;
@@ -36,6 +73,13 @@ public partial class AlimentoPagemodel : ObservableObject
         cargarAlimentos();
     }
 
+
+    /**
+     * <summary>
+     * Carga todos los alimentos desde el repositorio y actualiza las colecciones.
+     * ID string generated is "M:Client.Pagemodel.Inventarios.AlimentoPagemodel.cargarAlimentos".
+     * </summary>
+     */
     [RelayCommand]
     public async Task cargarAlimentos()
     {
@@ -53,6 +97,14 @@ public partial class AlimentoPagemodel : ObservableObject
         AlimentosFiltrados = new ObservableCollection<Alimento>(lista);
     }
 
+
+    /**
+     * <summary>
+     * Abre el popup para añadir un nuevo alimento.
+     * Si el usuario confirma, se guarda en Firebase y se recarga la lista.
+     * ID string generated is "M:Client.Pagemodel.Inventarios.AlimentoPagemodel.abrirPopupAñadir".
+     * </summary>
+     */
     [RelayCommand]
     public async Task abrirPopupAñadir()
     {
@@ -70,6 +122,13 @@ public partial class AlimentoPagemodel : ObservableObject
             await cargarAlimentos();
         }
     }
+     /**
+     * <summary>
+     * Abre el popup para modificar un alimento existente.
+     * Tras confirmar, actualiza el registro en Firebase.
+     * ID string generated is "M:Client.Pagemodel.Inventarios.AlimentoPagemodel.abrirPopupModificar(Domain.Entities.Alimento)".
+     * </summary>
+     */
     [RelayCommand]
     public async Task abrirPopupModificar(Alimento alimento)
     {
@@ -97,6 +156,13 @@ public partial class AlimentoPagemodel : ObservableObject
         await _repository.EditarAlimento(modificada.idAlimento, modificada);
         await cargarAlimentos();
     }
+    /**
+     * <summary>
+     * Abre un popup de confirmación para eliminar un alimento.
+     * Si el usuario acepta, se elimina del repositorio.
+     * ID string generated is "M:Client.Pagemodel.Inventarios.AlimentoPagemodel.abrirPopupEliminar(Domain.Entities.Alimento)".
+     * </summary>
+     */
 
     [RelayCommand]
     public async Task abrirPopupEliminar(Alimento alimento)
@@ -120,7 +186,12 @@ public partial class AlimentoPagemodel : ObservableObject
             await cargarAlimentos();
         }
     }
-
+    /**
+     * <summary>
+     * Aplica el filtro de búsqueda y el criterio de ordenación seleccionados.
+     * ID string generated is "M:Client.Pagemodel.Inventarios.AlimentoPagemodel.FiltrarYOrdenar".
+     * </summary>
+     */
     void FiltrarYOrdenar()
     {
         IEnumerable<Alimento> lista = Alimentos;
@@ -144,16 +215,33 @@ public partial class AlimentoPagemodel : ObservableObject
         AlimentosFiltrados = new ObservableCollection<Alimento>(lista);
     }
 
+    /**
+    * <summary>
+    * Evento generado automáticamente cuando cambia el texto de búsqueda.
+    * ID string generated is "M:Client.Pagemodel.Inventarios.AlimentoPagemodel.OnTextoBusquedaChanged(System.String)".
+    * </summary>
+    */
     partial void OnTextoBusquedaChanged(string value)
     {
         FiltrarYOrdenar();
     }
 
+    /**
+     * <summary>
+     * Evento generado automáticamente cuando cambia el criterio de ordenación.
+     * ID string generated is "M:Client.Pagemodel.Inventarios.AlimentoPagemodel.OnCriterioOrdenChanged(System.String)".
+     * </summary>
+     */
     partial void OnCriterioOrdenChanged(string value)
     {
         FiltrarYOrdenar();
     }
-
+        /**
+     * <summary>
+     * Navega de vuelta al menú principal.
+     * ID string generated is "M:Client.Pagemodel.Inventarios.AlimentoPagemodel.volver".
+     * </summary>
+     */
     [RelayCommand]
     public async Task volver()
     {
