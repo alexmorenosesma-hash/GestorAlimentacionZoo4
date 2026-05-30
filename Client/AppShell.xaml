@@ -6,7 +6,9 @@
     xmlns:local="clr-namespace:Client.Pages"
     xmlns:menu="clr-namespace:Client.Pages.Menu"
     xmlns:inventarios="clr-namespace:Client.Pages.Inventarios"
-    Title="Client">
+    Shell.NavBarIsVisible="False"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Gestor de alimentación de zoo">
 
     <ShellContent
         ContentTemplate="{DataTemplate menu:MenuPage}"

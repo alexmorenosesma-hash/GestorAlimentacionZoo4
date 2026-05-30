@@ -53,5 +53,10 @@ namespace Infraestructure.Repositories
             .Select(d => d.nombre)
             .ToList();
         }
+
+        public async Task<List<(string Id, Dieta Data)>> ObtenerPaginaDietas(string? lastKey, int pageSize)
+        {
+            return await _db.GetPagedAsync<Dieta>("dietas", lastKey, pageSize);
+        }
     }
 }

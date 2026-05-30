@@ -45,5 +45,10 @@ namespace Infraestructure.Repositories
 
         public Task EliminarHorario(string id)
             => _db.DeleteAsync("horarios", id);
+
+        public async Task<List<(string Id, Horario Data)>> ObtenerPaginaHorarios(string? lastKey, int pageSize)
+        {
+            return await _db.GetPagedAsync<Horario>("horarios", lastKey, pageSize);
+        }
     }
 }

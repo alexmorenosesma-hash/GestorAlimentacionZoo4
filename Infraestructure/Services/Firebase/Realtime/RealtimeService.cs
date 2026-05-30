@@ -40,7 +40,21 @@ namespace Infraestructure.Services.Firebase.Realtime
             await _client.Child(path).Child(id).DeleteAsync();
         }
 
+        public async Task<List<(string Id, T Data)>> GetPagedAsync<T>(string path,string? startAfterKey,int pageSize)
+        {
+            var query = _client.Child(path)
+                               .OrderByKey()
+                               .LimitToFirst(pageSize + 1);
 
+            if (!string.IsNullOrEmpty(startAfterKey))
+                query = query.StartAt(startAfterKey);
 
+            var result = await query.OnceAsync<T>();
+
+            if (!string.IsNullOrEmpty(startAfterKey))
+                result = result.Skip(1).ToList();
+
+            return result.Select(x => (x.Key, x.Object)).ToList();
+        }
     }
 }

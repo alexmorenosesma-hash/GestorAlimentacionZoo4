@@ -39,6 +39,12 @@ public partial class AnimalPagemodel : ObservableObject
     [ObservableProperty]
     string _criterioOrden;
 
+    string lastKey = null;
+    int pageSize = 5;
+
+    [ObservableProperty]
+    bool _hayMasPaginas;
+
     public AnimalPagemodel(IAnimalRepository repository, IPopupService popup, IEspecieRepository especieRepository, IDietaRepository dietaRepository, IHorarioRepository horarioRepository, ICuidadorRepository cuidadorRepository, IEnfermedadRepository enfermedadRepository, IServiceProvider serviceProvider)
     {
         _repository = repository;
@@ -60,21 +66,60 @@ public partial class AnimalPagemodel : ObservableObject
         var animales = await _repository.ObtenerAnimales();
 
         var lista = animales
-            .Where(a =>
-                a != null &&
-                !string.IsNullOrWhiteSpace(a.idAnimal) &&
-                !string.IsNullOrWhiteSpace(a.nombre)
+            .Where(c =>
+                c != null &&
+                !string.IsNullOrWhiteSpace(c.idAnimal) &&
+                !string.IsNullOrWhiteSpace(c.nombre)
             )
             .ToList();
 
-        foreach (var animal in lista)
-        {
-            animal.HorariosTexto = ObtenerTextoHorarios(animal);
-            animal.EnfermedadesTexto = ObtenerTextoEnfermedades(animal);
-        }
-
         Animales = new ObservableCollection<Animal>(lista);
         AnimalesFiltrados = new ObservableCollection<Animal>(lista);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    //[RelayCommand]
+    //public async Task cargarAnimales()
+    //{
+      //  lastKey = null;
+       // Animales.Clear();
+       // AnimalesFiltrados.Clear();
+
+        //await CargarPagina();
+    //}
+
+    public async Task CargarPagina()
+    {
+        var pagina = await _repository.ObtenerPaginaAnimales(lastKey, pageSize);
+
+        if (pagina.Count == 0)
+        {
+            HayMasPaginas = false;
+            return;
+        }
+        lastKey = pagina.Last().Id;
+        foreach (var item in pagina)
+        {
+            var animal = item.Data;
+
+            animal.horariosTexto = ObtenerTextoHorarios(animal);
+            animal.enfermedadesTexto = ObtenerTextoEnfermedades(animal);
+
+            Animales.Add(animal);
+            AnimalesFiltrados.Add(animal);
+        }
+
+        HayMasPaginas = pagina.Count == pageSize;
+    }
+
+    [RelayCommand]
+    public async Task CargarMas()
+    {
+        if (HayMasPaginas)
+            await CargarPagina();
     }
 
     [RelayCommand]
@@ -109,8 +154,9 @@ public partial class AnimalPagemodel : ObservableObject
             dieta = animal.dieta,
             cuidador = animal.cuidador,
             horariosAlimentacion =animal.horariosAlimentacion,
-            enfermedades = animal.enfermedades
-
+            enfermedades = animal.enfermedades,
+            enfermedadesTexto = animal.enfermedadesTexto,
+            horariosTexto = animal.horariosTexto
         };
 
         var popup = new AnimalModificarPopup(vm);
