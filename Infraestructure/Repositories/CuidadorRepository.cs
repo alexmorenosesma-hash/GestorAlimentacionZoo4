@@ -54,5 +54,10 @@ namespace Infraestructure.Repositories
             .ToList();
         }
 
+        public async Task<List<(string Id, Cuidador Data)>> ObtenerPaginaCuidadores(string? lastKey, int pageSize)
+        {
+            return await _db.GetPagedAsync<Cuidador>("cuidadores", lastKey, pageSize);
+        }
+
     }
 }

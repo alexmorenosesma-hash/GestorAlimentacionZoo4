@@ -15,8 +15,8 @@ namespace Domain.Entities
         public string cuidador { get; set; }
         public List<string> horariosAlimentacion{get;set; }
         public List<string> enfermedades { get;set; }
-        public string HorariosTexto { get; set; } = "Sin horarios";
-        public string EnfermedadesTexto { get; set; } = "Sin enfermedades";
+        public string horariosTexto { get; set; } = "Sin horarios";
+        public string enfermedadesTexto { get; set; } = "Sin enfermedades";
 
         public Animal()
         {
@@ -32,8 +32,8 @@ namespace Domain.Entities
             this.cuidador = cuidador;
             this.horariosAlimentacion = horariosAlimentacion;
             this.enfermedades = enfermedades;
-            HorariosTexto = horariosTexto;
-            EnfermedadesTexto = enfermedadesTexto;
+            this.horariosTexto = horariosTexto;
+            this.enfermedadesTexto = enfermedadesTexto;
         }
 
         public Animal(int edad, int peso, string especie, string dieta, List<string> horariosAlimentacion, List<string> enfermedades, string cuidador)

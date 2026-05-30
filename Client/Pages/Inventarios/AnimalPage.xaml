@@ -72,15 +72,16 @@
                                             <Label Text="Dieta:" FontAttributes="Bold" Grid.Column="0" Grid.Row="6" HorizontalTextAlignment="End"/>
                                             <Label Text="{Binding dieta}" FontAttributes="Bold" Grid.Column="1" Grid.Row="6"/>
                                             <Label Text="Horarios:" FontAttributes="Bold" Grid.Column="0" Grid.Row="7" HorizontalTextAlignment="End"/>
-                                            <Label Text="{Binding HorariosTexto}" FontAttributes="Bold" Grid.Column="1" Grid.Row="7"/>
+                                            <Label Text="{Binding horariosTexto}" FontAttributes="Bold" Grid.Column="1" Grid.Row="7"/>
                                             <Label Text="Enfermedades:" FontAttributes="Bold" Grid.Column="0" Grid.Row="8" HorizontalTextAlignment="End"/>
-                                            <Label Text="{Binding EnfermedadesTexto}" FontAttributes="Bold" Grid.Column="1" Grid.Row="8" Margin="0,0,0,20"/>
+                                            <Label Text="{Binding enfermedadesTexto}" FontAttributes="Bold" Grid.Column="1" Grid.Row="8" Margin="0,0,0,20"/>
                                         </Grid>
                                     </StackLayout>
                                 </Border>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
+                    <!-- <Button Text="Cargar mas" Command="{Binding CargarMasCommand}"  BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="15"/> -->
                 </StackLayout>
             </Border>
         </VerticalStackLayout>

@@ -33,6 +33,15 @@ public partial class AnimalModificarPopupPagemodel : ObservableObject
     [ObservableProperty]
     ObservableCollection<string> _enfermedades = new();
 
+    [ObservableProperty]
+    string _especieSeleccionada;
+
+    [ObservableProperty]
+    string _dietaSeleccionada;
+
+    [ObservableProperty]
+    string _cuidadorSeleccionado;
+
     IPopupService _popup;
     IEspecieRepository _especieRepository;
     IDietaRepository _dietaRepository;
@@ -71,6 +80,9 @@ public partial class AnimalModificarPopupPagemodel : ObservableObject
         await CargarNombresEspecies();
         await CargarNombresDietas();
         await CargarNombresCuidadores();
+        EspecieSeleccionada = Model.especie;
+        DietaSeleccionada = Model.dieta;
+        CuidadorSeleccionado = Model.cuidador;
     }
 
     [RelayCommand]
@@ -94,7 +106,6 @@ public partial class AnimalModificarPopupPagemodel : ObservableObject
     public async Task CargarNombresEspecies()
     {
         var nombres = await _especieRepository.ObtenerNombreEspecies();
-
         NombresEspecies = new ObservableCollection<string>(nombres);
     }
 

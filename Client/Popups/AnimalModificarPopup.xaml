@@ -24,15 +24,15 @@
                 </Border>
                 <Label Text="Selecciona la especie del animal" FontAttributes="Bold"/>
                 <Border Stroke="#14453D" Margin="0,0,0,5" StrokeThickness="3">
-                    <Picker ItemsSource="{Binding NombresEspecies}" SelectedItem="{Binding Model.especie, Mode=TwoWay}"/>
+                    <Picker ItemsSource="{Binding NombresEspecies}" SelectedItem="{Binding EspecieSeleccionada, Mode=TwoWay}"/>
                 </Border>
                 <Label Text="Selecciona la dieta del animal" FontAttributes="Bold"/>
                 <Border Stroke="#14453D" Margin="0,0,0,5" StrokeThickness="3">
-                    <Picker ItemsSource="{Binding NombresDietas}" SelectedItem="{Binding Model.dieta, Mode=TwoWay}"/>
+                    <Picker ItemsSource="{Binding NombresDietas}" SelectedItem="{Binding DietaSeleccionada, Mode=TwoWay}"/>
                 </Border>
                 <Label Text="Selecciona el cuidador del animal" FontAttributes="Bold"/>
                 <Border Stroke="#14453D" Margin="0,0,0,5" StrokeThickness="3">
-                    <Picker ItemsSource="{Binding NombresCuidadores}" SelectedItem="{Binding Model.cuidador, Mode=TwoWay}"/>
+                    <Picker ItemsSource="{Binding NombresCuidadores}" SelectedItem="{Binding CuidadorSeleccionado, Mode=TwoWay}"/>
                 </Border>
             </StackLayout>
             <Button Text="Modificar horarios" Command="{Binding SeleccionarHorariosCommand}" BackgroundColor="#D9E2D0" TextColor="#14453D" BorderColor="#14453D" BorderWidth="3" FontAttributes="Bold" Margin="0,10"/>

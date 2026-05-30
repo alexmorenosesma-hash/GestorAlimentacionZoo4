@@ -44,5 +44,10 @@ namespace Infraestructure.Repositories
 
         public Task EliminarAnimal(string id)
             => _db.DeleteAsync("animales", id);
+
+        public async Task<List<(string Id, Animal Data)>> ObtenerPaginaAnimales(string? lastKey,int pageSize)
+        {
+            return await _db.GetPagedAsync<Animal>("animales", lastKey, pageSize);
+        }
     }
 }

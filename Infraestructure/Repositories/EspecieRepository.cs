@@ -53,6 +53,11 @@ namespace Infraestructure.Repositories
             .Select(e => e.nombre)
             .ToList();
         }
+
+        public async Task<List<(string Id, Especie Data)>> ObtenerPaginaEspecies(string? lastKey, int pageSize)
+        {
+            return await _db.GetPagedAsync<Especie>("especies ", lastKey, pageSize);
+        }
     }
 
 }

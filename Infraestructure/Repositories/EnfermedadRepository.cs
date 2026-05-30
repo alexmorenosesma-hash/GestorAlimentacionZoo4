@@ -54,5 +54,10 @@ namespace Infraestructure.Repositories
             .Select(e => e.nombre)
             .ToList();
         }
+
+        public async Task<List<(string Id, Enfermedad Data)>> ObtenerPaginaEnfermedades(string? lastKey, int pageSize)
+        {
+            return await _db.GetPagedAsync<Enfermedad>("enfermedades", lastKey, pageSize);
+        }
     }
 }

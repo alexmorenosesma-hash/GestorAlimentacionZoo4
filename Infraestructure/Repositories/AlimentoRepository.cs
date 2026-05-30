@@ -44,5 +44,10 @@ namespace Infraestructure.Repositories
 
         public Task EliminarAlimento(string id)
             => _db.DeleteAsync("alimentos", id);
+
+        public async Task<List<(string Id, Alimento Data)>> ObtenerPaginaAlimentos(string? lastKey, int pageSize)
+        {
+            return await _db.GetPagedAsync<Alimento>("alimentos", lastKey, pageSize);
+        }
     }
 }
